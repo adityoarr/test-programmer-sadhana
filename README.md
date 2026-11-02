@@ -50,22 +50,26 @@ Diagram ERD lengkap tersedia pada dokumen/gambar ERD terpisah.
 ## Cara Menjalankan
 
 1. Masuk ke folder project, lalu install dependency:
-
-   composer install
+    ```bash
+    composer install
 
 2. Salin dan sesuaikan file environment:
-
-   cp .env.example .env
-   php artisan key:generate
+    ```bash
+    cp .env.example .env
+    php artisan key:generate
 
 3. Jalankan database PostgreSQL dengan Docker:
+    ```bash
     docker compose up -d
 
 4. Jalankan migration beserta data awal (seeder):
-   php artisan migrate --seed
+    ```bash
+    php artisan migrate --seed
    
-5. 
+5. Jalankan aplikasi:
+    ```bash
     php artisan serve
 
 6. Buka aplikasi di browser:
+    ```bash
     http://localhost:8000
